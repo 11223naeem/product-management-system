@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --primary: linear-gradient(135deg, #00c9a7, #007f5f);
+    --accent: #00c9a7;
+    --text: #ffffff;
+}
+
+/* Background Animation */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    height: 100vh;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Floating circles animation */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    animation: float 6s infinite ease-in-out;
+}
+
+body::before {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 20%;
+}
+
+body::after {
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Glass Card */
+.login-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 340px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    color: var(--text);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+.login-card h2 {
+    margin-bottom: 25px;
+}
+
+/* Input */
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #007f5f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    background: #e6fff7;
+}
+
+/* Create Button */
+.create-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.create-btn:hover {
+    background: #fff;
+    color: #007f5f;
+}
+
+/* Error */
+.error {
+    color: #ffdede;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+    <h2>Product Login</h2>
+
+    <!-- Error -->
+    <p class="error" th:text="${error}"></p>
+
+    <form action="loginAccount">
+        <input type="text" name="name" placeholder="Enter Username" required>
+        <input type="text" name="pass" placeholder="Enter Password" maxlength="10" required>
+
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <a href="createAccount" class="create-btn">Create Account</a>
+</div>
+
+</body>
+</html>
