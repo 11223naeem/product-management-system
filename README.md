@@ -2,8 +2,6 @@
 
 A modern **Spring Boot + Thymeleaf** web application to manage products with authentication and dynamic search features.
 
----
-
 ## 🌟 Features
 
 ✨ User Login System (Session-based)
@@ -13,8 +11,6 @@ A modern **Spring Boot + Thymeleaf** web application to manage products with aut
 📊 View All Products
 🎨 Modern UI with Animations
 🔒 Logout & Session Protection
-
----
 
 ## 🖼️ Screenshots
 
@@ -38,7 +34,6 @@ A modern **Spring Boot + Thymeleaf** web application to manage products with aut
 
 ![Products](images/products.png)
 
----
 
 ## 🛠️ Tech Stack
 
@@ -49,8 +44,6 @@ A modern **Spring Boot + Thymeleaf** web application to manage products with aut
 * 🎨 HTML + CSS + Thymeleaf
 * 🔐 HttpSession (Authentication)
 
----
-
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone Repository
@@ -58,7 +51,6 @@ A modern **Spring Boot + Thymeleaf** web application to manage products with aut
 ```bash
 git clone https://github.com/your-username/product-management-system.git
 cd product-management-system
-```
 
 ### 2️⃣ Configure Database
 
@@ -71,9 +63,6 @@ spring.datasource.password=your_password
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
-```
-
----
 
 ### 3️⃣ Run Application
 
@@ -86,8 +75,6 @@ mvn spring-boot:run
 ```
 http://localhost:8080/login
 ```
-
----
 
 ## 🔐 Authentication Flow
 
@@ -110,8 +97,6 @@ src/
  └── static/
 ```
 
----
-
 ## 🚀 Future Improvements
 
 * 🔐 Spring Security Integration
@@ -120,13 +105,9 @@ src/
 * 📊 Pagination & Sorting
 * 🌐 Deployment (Render / Railway)
 
----
-
 ## 🙋‍♂️ Author
 
 **Naeem Shaikh**
-
----
 
 ## ⭐ Support
 
@@ -150,5 +131,3 @@ project-folder/
  │    └── search.png
  └── README.md
 ```
-
----
